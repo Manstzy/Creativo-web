@@ -21,8 +21,9 @@ const Services = () => {
   };
 
   return (
-    <div id="services" className=" w-full bg-[#1F1F39] px-5 py-8">
+    <div id="services" className=" w-full bg-[#1F1F39] px-5 py-8 ">
       <h1 className="text-white">Our Services</h1>
+      <div>
 
       <div
         onClick={handleSlide}
@@ -123,6 +124,9 @@ const Services = () => {
         create compelling brand identities that tell your unique story and
         resonate with your target audience.
       </div>
+
+      </div>
+
     </div>
   );
 };

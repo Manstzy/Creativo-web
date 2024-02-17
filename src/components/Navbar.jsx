@@ -1,6 +1,8 @@
 import star from "../../images/star.png";
 import menu from "../../images/menu.png";
 import { useState } from "react";
+import { Link } from "react-scroll";
+
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [bgNav, setBgNav] = useState(false);
@@ -24,7 +26,12 @@ const Navbar = () => {
           : "fixed transition-all items-center h-16 desktop:p-8 duration-300 w-full z-10 p-2 px-4 flex justify-between"
       }
     >
-      <div className="flex items-center justify-center">
+      <div
+        className="flex items-center justify-center"
+        data-aos-easing="ease-in-sine"
+        data-aos="fade-right"
+        data-aos-duration="0.9"
+      >
         <img
           src={star}
           className={
@@ -34,11 +41,13 @@ const Navbar = () => {
           }
           alt=""
         />
-        <a href="#home">
-          <p className="font-inter ml-1 font-semibold phone:text-xl">
-            Creativo.
-          </p>
-        </a>
+        <Link
+          to="home"
+          smooth={true}
+          className="cursor-pointer font-inter ml-1 font-semibold phone:text-xl"
+        >
+          Creativo.
+        </Link>
       </div>
       <div>
         <img
@@ -52,30 +61,38 @@ const Navbar = () => {
           }
         />
       </div>
-      <ul className="laptop:flex hidden gap-5 font-inter font-semibold">
+      <ul
+        className="laptop:flex hidden gap-5 font-inter font-semibold"
+        data-aos-easing="ease-in-sine"
+        data-aos="fade-left"
+        data-aos-duration="0.9"
+      >
         <li>
-          <a
-            href="#home"
-            className="hover:bg-[#1F1F39] duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
+          <Link
+            to="home"
+            smooth={true}
+            className="hover:bg-[#1F1F39] cursor-pointer duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#services"
-            className="hover:bg-[#1F1F39] duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
+          <Link
+            to="services"
+            smooth={true}
+            className="hover:bg-[#1F1F39] cursor-pointer duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
           >
             About Us
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#portofolio"
-            className="hover:bg-[#1F1F39] duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
+          <Link
+            to="portofolio"
+            smooth={true}
+            className="hover:bg-[#1F1F39] cursor-pointer duration-300 transition-all hover:text-white px-3 py-1 rounded-lg"
           >
             Portofolio
-          </a>
+          </Link>
         </li>
       </ul>
 
